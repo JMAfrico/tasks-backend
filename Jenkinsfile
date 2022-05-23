@@ -29,7 +29,8 @@ pipeline{
 
                 }
             }
-        }stage('Deploy Backend'){
+        }
+        stage('Deploy Backend'){
             steps{
                 deploy adapters: [tomcat8(credentialsId: 'LOGIN_TOMCAT', path:'',url: 'http://localhost:8001')]
             }
